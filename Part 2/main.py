@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     candidates = utils.get_candidates_all()
-    return render_template('list.html', values=candidates)
+    return render_template('list.html', candidates=candidates)
 
 
 @app.route("/candidates/<int:pk>")
