@@ -25,7 +25,7 @@ def get_candidates_by_name(candidate_name):
 @app.route("/skill/<skill>")
 def get_candidates_by_skills(skill):
     candidates = utils.get_candidates_by_skill(skill.lower())
-    return render_template('skill .html', candidates=candidates, count_candidates=len(candidates))
+    return render_template('skill.html', candidates=candidates, count_candidates=len(candidates))
 
 
 app.run(debug=True)
